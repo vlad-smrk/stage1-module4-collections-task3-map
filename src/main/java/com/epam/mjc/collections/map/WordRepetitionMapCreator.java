@@ -8,6 +8,7 @@ public class WordRepetitionMapCreator {
         String[] words = sentence.split(" +");
         Map<String, Integer> result = new HashMap<>();
         for (String word : words) {
+            word = word.toLowerCase();
             int count = result.getOrDefault(word, 0);
             result.put(word, count + 1);
         }

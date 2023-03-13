@@ -8,7 +8,7 @@ public class WordRepetitionMapCreator {
     public Map<String, Integer> createWordRepetitionMap(String sentence) {
 
         String[] words = sentence.split("\\W+");
-        if (Objects.equals(words[0], "")) {
+        if (words.length == 1 && Objects.equals(words[0], "")) {
             return new HashMap<>();
         }
 
@@ -21,8 +21,4 @@ public class WordRepetitionMapCreator {
         return result;
     }
 
-    public static void main(String[] args) {
-        Map<String, Integer> test = new WordRepetitionMapCreator().createWordRepetitionMap("");
-        System.out.println(test);
-    }
 }

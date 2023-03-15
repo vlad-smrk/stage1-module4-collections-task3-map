@@ -20,8 +20,4 @@ public class WordRepetitionMapCreator {
         return result;
     }
 
-    public static void main(String[] args) {
-        Map<String, Integer> test = new WordRepetitionMapCreator().createWordRepetitionMap("");
-        System.out.println(test);
-    }
 }

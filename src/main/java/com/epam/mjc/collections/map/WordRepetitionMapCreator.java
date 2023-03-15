@@ -2,12 +2,13 @@ package com.epam.mjc.collections.map;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 public class WordRepetitionMapCreator {
     public Map<String, Integer> createWordRepetitionMap(String sentence) {
 
         String[] words = sentence.split("\\W+");
-        if (words.length == 1 && "".equals(words[0])) {
+        if (Objects.equals(words[0], "")) {
             return new HashMap<>();
         }
 
@@ -20,4 +21,8 @@ public class WordRepetitionMapCreator {
         return result;
     }
 
+    public static void main(String[] args) {
+        Map<String, Integer> test = new WordRepetitionMapCreator().createWordRepetitionMap("");
+        System.out.println(test);
+    }
 }
